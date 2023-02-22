@@ -7,6 +7,7 @@ let loading = document.querySelector(".loading");
     linkActive();
     getGames("mmorpg");
 
+    // ========== log out ==========
     document.querySelector("#LogOut").addEventListener('click',()=>{
         localStorage.removeItem("token");
         location.href = "./index.html";
