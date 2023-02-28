@@ -69,12 +69,27 @@ const validation = {
             input.classList.remove("is-valid");
             return false;
         }
+    },
+    validreturn:function(input , style){
+        if(style.test(input.value) == true){
+            return true;
+        }else{
+            return false;
+        };
     }
 };
 
 inputs[0].addEventListener("input",function(){
     validation.valid(inputs[0],validation.validEmail);
+    vv();
 });
 inputs[1].addEventListener("input",function(){
     validation.valid(inputs[1],validation.validPassword);
+    vv();
 });
+
+function vv(){
+    if(validation.validreturn(inputs[0],validation.validEmail) && validation.validreturn(inputs[1],validation.validPassword)){
+        document.querySelector("#btnLogin").removeAttribute("disabled");
+    }
+}

@@ -71,22 +71,40 @@ const validation = {
             input.classList.add("is-invalid");
             input.classList.remove("is-valid");
             return false;
-        }
+        };
+    },
+    validreturn:function(input , style){
+        if(style.test(input.value) == true){
+            return true;
+        }else{
+            return false;
+        };
     }
 };
 
 inputs[0].addEventListener("input",function(){
     validation.valid(inputs[0],validation.validName);
+    vv();
 });
 inputs[1].addEventListener("input",function(){
     validation.valid(inputs[1],validation.validName);
+    vv();
 });
 inputs[2].addEventListener("input",function(){
     validation.valid(inputs[2],validation.validEmail);
+    vv();
 });
 inputs[3].addEventListener("input",function(){
     validation.valid(inputs[3],validation.validPassword);
+    vv();
 });
 inputs[4].addEventListener("input",function(){
     validation.valid(inputs[4],validation.validAge);
+    vv();
 });
+
+function vv(){
+    if(validation.validreturn(inputs[0],validation.validName) && validation.validreturn(inputs[1],validation.validName) && validation.validreturn(inputs[2],validation.validEmail) && validation.validreturn(inputs[3],validation.validPassword) && validation.validreturn(inputs[4],validation.validAge)){
+        document.querySelector("#btnRegister").removeAttribute("disabled");
+    }
+}
