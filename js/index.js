@@ -91,5 +91,7 @@ inputs[1].addEventListener("input",function(){
 function vv(){
     if(validation.validreturn(inputs[0],validation.validEmail) && validation.validreturn(inputs[1],validation.validPassword)){
         document.querySelector("#btnLogin").removeAttribute("disabled");
+    }else{
+    document.querySelector("#btnLogin").setAttribute("disabled" , "true");
     }
 }

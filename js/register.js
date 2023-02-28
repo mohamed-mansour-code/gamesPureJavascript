@@ -106,5 +106,7 @@ inputs[4].addEventListener("input",function(){
 function vv(){
     if(validation.validreturn(inputs[0],validation.validName) && validation.validreturn(inputs[1],validation.validName) && validation.validreturn(inputs[2],validation.validEmail) && validation.validreturn(inputs[3],validation.validPassword) && validation.validreturn(inputs[4],validation.validAge)){
         document.querySelector("#btnRegister").removeAttribute("disabled");
+    }else{
+        document.querySelector("#btnRegister").setAttribute("disabled" , "true");
     }
 }
