@@ -74,6 +74,7 @@ function display(gamesData){
   
                <video muted="true"  preload="none" loop   class="w-100 d-none h-100 position-absolute top-0 start-0 z-3">
                 <source src="${gamesData[i].thumbnail.replace("thumbnail.jpg", "videoplayback.webm")}">
+                <source src="${gamesData[i].thumbnail.replace("thumbnail.jpg", "videoplayback.mp4")}">
                 </video>
   
               </figure>
