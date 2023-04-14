@@ -1,1 +1,1 @@
-https://mmo768.github.io/gamesPureJavascript/
+https://mohamed-mansour-code.github.io/gamesPureJavascript/
